@@ -3,85 +3,113 @@
   <title>
    Profile Card
   </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
   <style>
    body {
-            background-color: #0d1117;
-            font-family: 'Roboto', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            flex-direction: column;
-        }
-        .title {
-            color: #ffffff;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        .profile-card {
-            background-color: #161b22;
-            border-radius: 10px;
-            padding: 20px;
-            width: 300px;
-            text-align: center;
-            color: #c9d1d9;
-        }
-        .profile-card img {
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-        }
-        .profile-card h2 {
-            font-size: 1.5em;
-            margin: 10px 0 5px;
-            color: #ffffff;
-        }
-        .profile-card h3 {
-            font-size: 1em;
-            margin: 5px 0;
-            color: #8b949e;
-        }
-        .profile-card p {
-            font-size: 0.9em;
-            margin: 10px 0;
-            color: #8b949e;
-        }
-        .profile-card .social-icons {
-            margin-top: 15px;
-        }
-        .profile-card .social-icons a {
-            color: #c9d1d9;
-            margin: 0 5px;
-            font-size: 1.2em;
-            text-decoration: none;
-        }
-        .profile-card .social-icons a:hover {
-            color: #58a6ff;
-        }
-        .verified-badge {
-            position: relative;
-            display: inline-block;
-        }
-        .verified-badge::after {
-            content: '\f058';
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            color: #2ea043;
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            background-color: #161b22;
-            border-radius: 50%;
-            padding: 2px;
-        }
-        .footer {
-            margin-top: 20px;
-            color: #8b949e;
-            font-size: 0.9em;
-        }
+     background-color: #0d1117;
+     font-family: 'Roboto', sans-serif;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     margin: 0;
+   }
+
+   .title {
+     color: #ffffff;
+     font-size: 2em;
+     margin-bottom: 20px;
+     text-align: center;
+   }
+
+   .profile-card {
+     background-color: #161b22;
+     border-radius: 10px;
+     padding: 20px;
+     width: 50%; /* Set width to 50% of the viewport width */
+     max-width: 400px; /* Optional max width for larger screens */
+     text-align: center;
+     color: #c9d1d9;
+     box-sizing: border-box;
+   }
+
+   .profile-card img {
+     border-radius: 50%;
+     width: 100px;
+     height: 100px;
+   }
+
+   .profile-card h2 {
+     font-size: 1.8em;
+     margin: 10px 0 5px;
+     color: #ffffff;
+   }
+
+   .profile-card h3 {
+     font-size: 1em;
+     margin: 5px 0;
+     color: #8b949e;
+   }
+
+   .profile-card p {
+     font-size: 0.9em;
+     margin: 10px 0;
+     color: #8b949e;
+   }
+
+   .profile-card .social-icons {
+     margin-top: 15px;
+   }
+
+   .profile-card .social-icons a {
+     color: #c9d1d9;
+     margin: 0 5px;
+     font-size: 1.5em;
+     text-decoration: none;
+   }
+
+   .profile-card .social-icons a:hover {
+     color: #58a6ff;
+   }
+
+   .verified-badge {
+     position: relative;
+     display: inline-block;
+   }
+
+   .verified-badge::after {
+     content: '\f058';
+     font-family: 'Font Awesome 5 Free';
+     font-weight: 900;
+     color: #2ea043;
+     position: absolute;
+     top: -5px;
+     right: -5px;
+     background-color: #161b22;
+     border-radius: 50%;
+     padding: 2px;
+   }
+
+   .footer {
+     margin-top: 20px;
+     color: #8b949e;
+     font-size: 0.9em;
+   }
+
+   @media (max-width: 768px) {
+     .profile-card {
+       width: 70%; /* Adjust width for smaller screens */
+     }
+   }
+
+   @media (max-width: 480px) {
+     .profile-card {
+       width: 90%; /* Adjust width for very small screens */
+     }
+   }
   </style>
  </head>
  <body>
@@ -90,7 +118,7 @@
   </div>
   <div class="profile-card">
    <div class="verified-badge">
-    <img alt="Profile picture of Indra Dev with a stylized 'Y' logo" height="80" src="https://files.catbox.moe/pcx4zu.png" width="80"/>
+    <img alt="Profile picture of Indra Dev with a stylized 'Y' logo" src="https://files.catbox.moe/pcx4zu.png" />
    </div>
    <h2>
     Indra Dev
@@ -103,33 +131,24 @@
    </p>
    <div class="social-icons">
     <a href="#">
-     <i class="fab fa-github">
-     </i>
+     <i class="fab fa-github"></i>
     </a>
     <a href="#">
-     <i class="fab fa-instagram">
-     </i>
+     <i class="fab fa-instagram"></i>
     </a>
     <a href="#">
-     <i class="fab fa-youtube">
-     </i>
+     <i class="fab fa-youtube"></i>
     </a>
     <a href="#">
-     <i class="fab fa-facebook">
-     </i>
+     <i class="fab fa-facebook"></i>
     </a>
     <a href="#">
-     <i class="fab fa-linkedin">
-     </i>
+     <i class="fab fa-linkedin"></i>
     </a>
     <a href="#">
-     <i class="fas fa-envelope">
-     </i>
+     <i class="fas fa-envelope"></i>
     </a>
    </div>
-  </div>
-  <div class="footer">
-   © 2024 Indra-GPT. All rights reserved.
   </div>
  </body>
 </html>
